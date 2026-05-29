@@ -12,7 +12,7 @@
 |--------|------|------|
 | parser_name | pymupdf | docling |
 | skipped | False | True |
-| parse_runtime_seconds | 0.3167 | None |
+| parse_runtime_seconds | 0.3712 | None |
 | page_count | 60 | 0 |
 | extracted_char_count | 766344 | 0 |
 | low_text_page_count | 0 | 0 |

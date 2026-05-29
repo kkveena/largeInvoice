@@ -1,9 +1,9 @@
 {
-  "run_id": "run-20260529T203647Z",
+  "run_id": "run-20260529T220447Z",
   "document_id": "Metals_Option_Products-89ddba8c4b",
   "config": {
-    "pdf_path": "data/input/Metals_Option_Products.pdf",
-    "output_dir": "data/output",
+    "pdf_path": "/home/user/largeInvoice/data/input/Metals_Option_Products.pdf",
+    "output_dir": "/home/user/largeInvoice/data/output",
     "strategy": "compare",
     "dictionary_path": null,
     "llm_provider": "fake",
@@ -18,7 +18,7 @@
       "artifacts": [
         {
           "artifact_type": "parsed_document",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.pymupdf.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/parsed_document.pymupdf.json",
           "strategy": "pymupdf",
           "metadata": {}
         }
@@ -36,13 +36,13 @@
       "artifacts": [
         {
           "artifact_type": "document_profile",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.pymupdf.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/document_profile.pymupdf.json",
           "strategy": "pymupdf",
           "metadata": {}
         },
         {
           "artifact_type": "chunks",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.pymupdf.jsonl",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/chunks.pymupdf.jsonl",
           "strategy": "pymupdf",
           "metadata": {}
         }
@@ -61,7 +61,7 @@
       "artifacts": [
         {
           "artifact_type": "parsed_document",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.docling.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/parsed_document.docling.json",
           "strategy": "docling",
           "metadata": {}
         }
@@ -81,13 +81,13 @@
       "artifacts": [
         {
           "artifact_type": "document_profile",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.docling.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/document_profile.docling.json",
           "strategy": "docling",
           "metadata": {}
         },
         {
           "artifact_type": "chunks",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.docling.jsonl",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/chunks.docling.jsonl",
           "strategy": "docling",
           "metadata": {}
         }
@@ -106,15 +106,23 @@
       "artifacts": [
         {
           "artifact_type": "extraction_dictionary",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.proposed.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_dictionary.proposed.json",
           "strategy": null,
           "metadata": {}
         },
         {
           "artifact_type": "extraction_dictionary",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.used.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_dictionary.used.json",
           "strategy": null,
           "metadata": {}
+        },
+        {
+          "artifact_type": "extraction_dictionary",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_dictionary.used.xlsx",
+          "strategy": null,
+          "metadata": {
+            "format": "xlsx"
+          }
         }
       ],
       "warnings": [],
@@ -129,13 +137,13 @@
       "artifacts": [
         {
           "artifact_type": "extraction_result",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.pymupdf.json",
           "strategy": "pymupdf",
           "metadata": {}
         },
         {
           "artifact_type": "markdown_result",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.md",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.pymupdf.md",
           "strategy": "pymupdf",
           "metadata": {}
         }
@@ -154,13 +162,13 @@
       "artifacts": [
         {
           "artifact_type": "extraction_result",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.docling.json",
           "strategy": "docling",
           "metadata": {}
         },
         {
           "artifact_type": "markdown_result",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.md",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.docling.md",
           "strategy": "docling",
           "metadata": {}
         }
@@ -179,13 +187,13 @@
       "artifacts": [
         {
           "artifact_type": "comparison_report",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.json",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/comparison_report.json",
           "strategy": null,
           "metadata": {}
         },
         {
           "artifact_type": "comparison_report",
-          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.md",
+          "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/comparison_report.md",
           "strategy": null,
           "metadata": {}
         }
@@ -206,90 +214,114 @@
   "artifacts": [
     {
       "artifact_type": "parsed_document",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.pymupdf.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/parsed_document.pymupdf.json",
       "strategy": "pymupdf",
       "metadata": {}
     },
     {
       "artifact_type": "document_profile",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.pymupdf.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/document_profile.pymupdf.json",
       "strategy": "pymupdf",
       "metadata": {}
     },
     {
       "artifact_type": "chunks",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.pymupdf.jsonl",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/chunks.pymupdf.jsonl",
       "strategy": "pymupdf",
       "metadata": {}
     },
     {
       "artifact_type": "parsed_document",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.docling.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/parsed_document.docling.json",
       "strategy": "docling",
       "metadata": {}
     },
     {
       "artifact_type": "document_profile",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.docling.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/document_profile.docling.json",
       "strategy": "docling",
       "metadata": {}
     },
     {
       "artifact_type": "chunks",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.docling.jsonl",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/chunks.docling.jsonl",
       "strategy": "docling",
       "metadata": {}
     },
     {
       "artifact_type": "extraction_dictionary",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.proposed.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_dictionary.proposed.json",
       "strategy": null,
       "metadata": {}
     },
     {
       "artifact_type": "extraction_dictionary",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.used.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_dictionary.used.json",
       "strategy": null,
       "metadata": {}
     },
     {
+      "artifact_type": "extraction_dictionary",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_dictionary.used.xlsx",
+      "strategy": null,
+      "metadata": {
+        "format": "xlsx"
+      }
+    },
+    {
       "artifact_type": "extraction_result",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.pymupdf.json",
       "strategy": "pymupdf",
       "metadata": {}
     },
     {
       "artifact_type": "markdown_result",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.md",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.pymupdf.md",
       "strategy": "pymupdf",
       "metadata": {}
     },
     {
       "artifact_type": "extraction_result",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.pymupdf.xlsx",
+      "strategy": "pymupdf",
+      "metadata": {
+        "format": "xlsx"
+      }
+    },
+    {
+      "artifact_type": "extraction_result",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.docling.json",
       "strategy": "docling",
       "metadata": {}
     },
     {
       "artifact_type": "markdown_result",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.md",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.docling.md",
       "strategy": "docling",
       "metadata": {}
     },
     {
+      "artifact_type": "extraction_result",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/extraction_result.docling.xlsx",
+      "strategy": "docling",
+      "metadata": {
+        "format": "xlsx"
+      }
+    },
+    {
       "artifact_type": "comparison_report",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.json",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/comparison_report.json",
       "strategy": null,
       "metadata": {}
     },
     {
       "artifact_type": "comparison_report",
-      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.md",
+      "path": "/home/user/largeInvoice/data/output/Metals_Option_Products-89ddba8c4b/run-20260529T220447Z/comparison_report.md",
       "strategy": null,
       "metadata": {}
     }
   ],
   "metadata": {
-    "created_at": "2026-05-29T20:36:47.672413+00:00"
+    "created_at": "2026-05-29T22:04:47.524644+00:00"
   }
 }
