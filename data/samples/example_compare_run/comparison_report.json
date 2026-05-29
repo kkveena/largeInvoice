@@ -9,7 +9,7 @@
     "pymupdf": {
       "parser_name": "pymupdf",
       "skipped": false,
-      "parse_runtime_seconds": 0.3167,
+      "parse_runtime_seconds": 0.3712,
       "page_count": 60,
       "extracted_char_count": 766344,
       "low_text_page_count": 0,

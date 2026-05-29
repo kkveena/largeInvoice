@@ -96,12 +96,16 @@ def propose_dictionary(
         "extraction_dictionary.used.json",
         ArtifactType.EXTRACTION_DICTIONARY,
     )
+    excel_ref = store.write_dictionary_excel(
+        dictionary, "extraction_dictionary.used.xlsx"
+    )
 
     console.print(
         f"[green]Proposed dictionary with {len(dictionary.items)} items.[/green]"
     )
     console.print(f"  proposed: {proposed_ref.path}")
     console.print(f"  used:     {used_ref.path}")
+    console.print(f"  excel:    {excel_ref.path}")
 
 
 @app.command("extract")
@@ -161,6 +165,50 @@ def compare(
 
     console.print(f"[green]Compare run complete:[/green] {state.run_id}")
     _summarize_run(state)
+
+
+@app.command("export-excel")
+def export_excel(
+    dictionary: str | None = typer.Option(
+        None, help="Path to a dictionary JSON to export to Excel."
+    ),
+    extraction: str | None = typer.Option(
+        None, help="Path to an extraction_result JSON to export to Excel."
+    ),
+    output: str | None = typer.Option(
+        None, help="Output .xlsx path (defaults next to the input JSON)."
+    ),
+) -> None:
+    """Export an existing dictionary or extraction-result JSON to Excel (.xlsx).
+
+    Handy for sharing the extraction dictionary or results with non-engineering
+    stakeholders without re-running the pipeline.
+    """
+    from ..domain.models import ExtractionDictionary, ExtractionResult
+    from ..rendering.excel_writer import ExcelExporter
+
+    if not dictionary and not extraction:
+        raise typer.BadParameter("Provide --dictionary and/or --extraction.")
+
+    exporter = ExcelExporter()
+
+    if dictionary:
+        src = Path(dictionary)
+        if not src.exists():
+            raise typer.BadParameter(f"Dictionary JSON not found: {dictionary}")
+        model = ExtractionDictionary.model_validate_json(src.read_text())
+        out = output if (output and extraction is None) else str(src.with_suffix(".xlsx"))
+        path = exporter.export_dictionary(model, out)
+        console.print(f"[green]Dictionary Excel written:[/green] {path}")
+
+    if extraction:
+        src = Path(extraction)
+        if not src.exists():
+            raise typer.BadParameter(f"Extraction JSON not found: {extraction}")
+        model = ExtractionResult.model_validate_json(src.read_text())
+        out = output if (output and dictionary is None) else str(src.with_suffix(".xlsx"))
+        path = exporter.export_extraction_result(model, out)
+        console.print(f"[green]Extraction Excel written:[/green] {path}")
 
 
 if __name__ == "__main__":

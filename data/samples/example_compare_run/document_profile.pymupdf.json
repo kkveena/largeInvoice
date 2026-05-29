@@ -33,14 +33,14 @@
   ],
   "detected_table_count": 60,
   "repeated_header_candidates": [
-    "METALS OPTIONS PRODUCTS",
     "CME Group, Inc.",
-    "2026 DAILY INFORMATION BULLETIN - http://www.cmegroup.com/dailybulletin"
+    "2026 DAILY INFORMATION BULLETIN - http://www.cmegroup.com/dailybulletin",
+    "METALS OPTIONS PRODUCTS"
   ],
   "repeated_footer_candidates": [
+    "© Copyright CME Group Inc. All rights reserved.",
     "IS ACCEPTED BY THE USER ON THE CONDITION THAT ERRORS OR OMISSIONS SHALL NOT BE MADE THE BASIS FOR ANY CLAIM, DEMAND, OR CAUSE FOR ACTION.",
-    "THE INFORMATION CONTAINED IN THIS REPORT IS COMPILED FOR THE CONVENIENCE OF THE USER AND IS FURNISHED WITHOUT RESPONSIBILITY FOR ACCURACY OR CONTENT. IT",
-    "© Copyright CME Group Inc. All rights reserved."
+    "THE INFORMATION CONTAINED IN THIS REPORT IS COMPILED FOR THE CONVENIENCE OF THE USER AND IS FURNISHED WITHOUT RESPONSIBILITY FOR ACCURACY OR CONTENT. IT"
   ],
   "representative_chunk_ids": [
     "pymupdf-c0000-p1",
@@ -58,7 +58,7 @@
       43,
       57
     ],
-    "parse_runtime_seconds": 0.3167,
+    "parse_runtime_seconds": 0.3712,
     "parser": "pymupdf",
     "parser_version": "1.27.2.3",
     "skipped": false,

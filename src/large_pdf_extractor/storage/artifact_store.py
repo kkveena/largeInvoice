@@ -15,8 +15,11 @@ from ..domain.models import (
     ArtifactRef,
     ArtifactType,
     DocumentChunk,
+    ExtractionDictionary,
+    ExtractionResult,
     ParseStrategy,
 )
+from ..rendering.excel_writer import ExcelExporter
 from ..rendering.json_writer import JSONWriter
 
 
@@ -28,6 +31,7 @@ class ArtifactStore:
         self.document_id = document_id
         self.run_id = run_id
         self._writer = JSONWriter()
+        self._excel = ExcelExporter()
         self.base.mkdir(parents=True, exist_ok=True)
 
     def path_for(self, filename: str) -> str:
@@ -78,4 +82,28 @@ class ArtifactStore:
         path = self._writer.write_dict(data, self.path_for(filename))
         return ArtifactRef(
             artifact_type=artifact_type, path=path, strategy=strategy
+        )
+
+    def write_dictionary_excel(
+        self, dictionary: ExtractionDictionary, filename: str
+    ) -> ArtifactRef:
+        path = self._excel.export_dictionary(dictionary, self.path_for(filename))
+        return ArtifactRef(
+            artifact_type=ArtifactType.EXTRACTION_DICTIONARY,
+            path=path,
+            metadata={"format": "xlsx"},
+        )
+
+    def write_extraction_excel(
+        self,
+        result: ExtractionResult,
+        filename: str,
+        strategy: ParseStrategy | None = None,
+    ) -> ArtifactRef:
+        path = self._excel.export_extraction_result(result, self.path_for(filename))
+        return ArtifactRef(
+            artifact_type=ArtifactType.EXTRACTION_RESULT,
+            path=path,
+            strategy=strategy,
+            metadata={"format": "xlsx"},
         )

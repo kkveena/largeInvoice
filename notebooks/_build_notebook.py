@@ -173,8 +173,13 @@ code(
     """
 from large_pdf_extractor.parsing.docling_parser import DoclingParser
 
-docling_available = DoclingParser().is_available()
+# Docling runs PyTorch models. On Apple Silicon (macOS/MPS) this can crash mid-
+# inference, so the parser defaults to the CPU accelerator. Override with the
+# LPE_DOCLING_DEVICE env var (cpu | mps | cuda | auto) before importing if needed.
+parser_dl = DoclingParser()
+docling_available = parser_dl.is_available()
 print("Docling available:", docling_available)
+print("Docling device:   ", parser_dl.device)
 
 dl_config = build_run_config(
     pdf_path=str(PDF_PATH),
@@ -188,11 +193,14 @@ dl_run_dir = OUTPUT_DIR / dl_state.document_id / dl_state.run_id
 
 dl_parsed_meta = json.loads((dl_run_dir / "parsed_document.docling.json").read_text())["metadata"]
 if dl_parsed_meta.get("skipped"):
-    print("Docling path gracefully skipped:")
+    # A skip is never silent/blank: the reason is always surfaced here.
+    print("Docling path was skipped. Reason(s):")
     for w in dl_parsed_meta.get("warnings", []):
-        print("   warning:", w)
+        print("   -", w)
 else:
-    print("Docling parsed", dl_parsed_meta, "pages.")
+    print(f"Docling parsed {dl_state} via device={dl_parsed_meta.get('device')}")
+    print("   pages:", json.loads((dl_run_dir / 'parsed_document.docling.json').read_text())['page_count'])
+    print("   docling tables:", dl_parsed_meta.get("docling_table_count"))
 """
 )
 
@@ -267,6 +275,38 @@ print(cmp_md[:1800])
 """
 )
 
+md(
+    """
+## 11b. Excel export — shareable dictionary & results for a product manager
+
+The pipeline already wrote `.xlsx` workbooks alongside the JSON/Markdown. Here
+we confirm them and also show the standalone `ExcelExporter` API for ad-hoc
+exports (e.g. emailing the dictionary to a PM).
+"""
+)
+code(
+    """
+from large_pdf_extractor.rendering.excel_writer import ExcelExporter
+import openpyxl
+
+# Workbooks written automatically by the run:
+dict_xlsx = py_run_dir / "extraction_dictionary.used.xlsx"
+result_xlsx = py_run_dir / "extraction_result.pymupdf.xlsx"
+print("Dictionary workbook:", dict_xlsx.exists(), dict_xlsx.name)
+print("Results workbook:   ", result_xlsx.exists(), result_xlsx.name)
+
+wb = openpyxl.load_workbook(dict_xlsx)
+print("Dictionary sheets:", wb.sheetnames)
+ws = wb["Dictionary"]
+print("Columns:", [c.value for c in ws[1]])
+print("Item rows:", ws.max_row - 1)
+
+# Ad-hoc export to any path (e.g. to share directly):
+pm_path = ExcelExporter().export_dictionary(validated, str(OUTPUT_DIR / "dictionary_for_PM.xlsx"))
+print("\\nStandalone export for sharing:", pm_path)
+"""
+)
+
 md("## 12. Artifact summary table")
 code(
     """
@@ -298,6 +338,7 @@ checks = {
     "Compare report JSON written": (cmp_run_dir / "comparison_report.json").exists(),
     "Compare report MD written": (cmp_run_dir / "comparison_report.md").exists(),
     "Shared dictionary used in compare": (cmp_run_dir / "extraction_dictionary.used.json").exists(),
+    "Dictionary exported to Excel (.xlsx)": (py_run_dir / "extraction_dictionary.used.xlsx").exists(),
     "Outputs reload via Pydantic": isinstance(py_result, ExtractionResult),
     "At least one value extracted with source span": any(
         v.source_spans for v in py_result.values

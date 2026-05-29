@@ -260,6 +260,13 @@ class Phase1Pipeline:
             ArtifactType.EXTRACTION_DICTIONARY,
         )
         artifacts.append(used_ref)
+
+        # Shareable Excel workbook of the dictionary (for non-engineering review).
+        excel_ref = store.write_dictionary_excel(
+            dictionary, "extraction_dictionary.used.xlsx"
+        )
+        artifacts.append(excel_ref)
+
         state.artifacts.extend(artifacts)
         state.steps.append(
             PipelineStepResult(
@@ -331,7 +338,10 @@ class Phase1Pipeline:
             ArtifactType.MARKDOWN_RESULT,
             strategy,
         )
-        state.artifacts.extend([json_ref, md_ref])
+        excel_ref = store.write_extraction_excel(
+            result, f"extraction_result.{strat}.xlsx", strategy
+        )
+        state.artifacts.extend([json_ref, md_ref, excel_ref])
         populated = sum(1 for v in result.values if v.value is not None)
         state.steps.append(
             PipelineStepResult(

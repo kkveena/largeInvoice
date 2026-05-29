@@ -23,6 +23,19 @@ artifact set under `data/output/<document_id>/<run_id>/`.
 Highlights to look at:
 
 - `extraction_dictionary.used.json` — the dictionary built **before** extraction.
-- `extraction_result.pymupdf.md` — human-readable extracted values with page/chunk traceability.
+- `extraction_dictionary.used.xlsx` — the same dictionary as a shareable Excel
+  workbook (for product managers / non-engineering reviewers).
+- `extraction_result.pymupdf.md` / `.xlsx` — human-readable extracted values with
+  page/chunk traceability.
 - `comparison_report.md` — engineering comparison of the PyMuPDF vs Docling paths
   (Docling is gracefully skipped when the optional dependency is not installed).
+
+Notes:
+
+- Docling runs PyTorch models. On Apple Silicon (macOS/MPS) it can crash
+  mid-inference, so `DoclingParser` defaults to the **CPU** accelerator. Override
+  with `LPE_DOCLING_DEVICE=cpu|mps|cuda|auto`. A failure is always reported as a
+  structured warning (never a blank result).
+- Every run also emits `.xlsx` workbooks for the dictionary and the extraction
+  results. You can also export any existing JSON with:
+  `python -m large_pdf_extractor.cli.main export-excel --dictionary <path.json> --output <out.xlsx>`
