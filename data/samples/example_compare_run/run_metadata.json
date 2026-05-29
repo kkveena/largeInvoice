@@ -1,0 +1,295 @@
+{
+  "run_id": "run-20260529T203647Z",
+  "document_id": "Metals_Option_Products-89ddba8c4b",
+  "config": {
+    "pdf_path": "data/input/Metals_Option_Products.pdf",
+    "output_dir": "data/output",
+    "strategy": "compare",
+    "dictionary_path": null,
+    "llm_provider": "fake",
+    "max_chunk_tokens": 4000,
+    "chunk_overlap_tokens": 300,
+    "max_chunks": 12
+  },
+  "steps": [
+    {
+      "step_name": "parse[pymupdf]",
+      "success": true,
+      "artifacts": [
+        {
+          "artifact_type": "parsed_document",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.pymupdf.json",
+          "strategy": "pymupdf",
+          "metadata": {}
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "metrics": {
+        "page_count": 60,
+        "skipped": false
+      }
+    },
+    {
+      "step_name": "profile_and_chunk[pymupdf]",
+      "success": true,
+      "artifacts": [
+        {
+          "artifact_type": "document_profile",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.pymupdf.json",
+          "strategy": "pymupdf",
+          "metadata": {}
+        },
+        {
+          "artifact_type": "chunks",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.pymupdf.jsonl",
+          "strategy": "pymupdf",
+          "metadata": {}
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "metrics": {
+        "total_char_count": 766344,
+        "chunk_count": 60,
+        "detected_table_count": 60
+      }
+    },
+    {
+      "step_name": "parse[docling]",
+      "success": false,
+      "artifacts": [
+        {
+          "artifact_type": "parsed_document",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.docling.json",
+          "strategy": "docling",
+          "metadata": {}
+        }
+      ],
+      "warnings": [
+        "Docling is not installed; Docling parser path was skipped."
+      ],
+      "errors": [],
+      "metrics": {
+        "page_count": 0,
+        "skipped": true
+      }
+    },
+    {
+      "step_name": "profile_and_chunk[docling]",
+      "success": true,
+      "artifacts": [
+        {
+          "artifact_type": "document_profile",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.docling.json",
+          "strategy": "docling",
+          "metadata": {}
+        },
+        {
+          "artifact_type": "chunks",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.docling.jsonl",
+          "strategy": "docling",
+          "metadata": {}
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "metrics": {
+        "total_char_count": 0,
+        "chunk_count": 0,
+        "detected_table_count": 0
+      }
+    },
+    {
+      "step_name": "generate_dictionary",
+      "success": true,
+      "artifacts": [
+        {
+          "artifact_type": "extraction_dictionary",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.proposed.json",
+          "strategy": null,
+          "metadata": {}
+        },
+        {
+          "artifact_type": "extraction_dictionary",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.used.json",
+          "strategy": null,
+          "metadata": {}
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "metrics": {
+        "item_count": 10
+      }
+    },
+    {
+      "step_name": "extract[pymupdf]",
+      "success": true,
+      "artifacts": [
+        {
+          "artifact_type": "extraction_result",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.json",
+          "strategy": "pymupdf",
+          "metadata": {}
+        },
+        {
+          "artifact_type": "markdown_result",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.md",
+          "strategy": "pymupdf",
+          "metadata": {}
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "metrics": {
+        "values_populated": 7,
+        "value_count": 10,
+        "skipped": false
+      }
+    },
+    {
+      "step_name": "extract[docling]",
+      "success": false,
+      "artifacts": [
+        {
+          "artifact_type": "extraction_result",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.json",
+          "strategy": "docling",
+          "metadata": {}
+        },
+        {
+          "artifact_type": "markdown_result",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.md",
+          "strategy": "docling",
+          "metadata": {}
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "metrics": {
+        "values_populated": 0,
+        "value_count": 0,
+        "skipped": true
+      }
+    },
+    {
+      "step_name": "compare_parser_paths",
+      "success": true,
+      "artifacts": [
+        {
+          "artifact_type": "comparison_report",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.json",
+          "strategy": null,
+          "metadata": {}
+        },
+        {
+          "artifact_type": "comparison_report",
+          "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.md",
+          "strategy": null,
+          "metadata": {}
+        }
+      ],
+      "warnings": [
+        "[docling] Docling is not installed; Docling parser path was skipped.",
+        "[docling] No chunks available for 'docling'; extraction skipped."
+      ],
+      "errors": [],
+      "metrics": {
+        "compared_strategies": [
+          "pymupdf",
+          "docling"
+        ]
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_type": "parsed_document",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.pymupdf.json",
+      "strategy": "pymupdf",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "document_profile",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.pymupdf.json",
+      "strategy": "pymupdf",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "chunks",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.pymupdf.jsonl",
+      "strategy": "pymupdf",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "parsed_document",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/parsed_document.docling.json",
+      "strategy": "docling",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "document_profile",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/document_profile.docling.json",
+      "strategy": "docling",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "chunks",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/chunks.docling.jsonl",
+      "strategy": "docling",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "extraction_dictionary",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.proposed.json",
+      "strategy": null,
+      "metadata": {}
+    },
+    {
+      "artifact_type": "extraction_dictionary",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_dictionary.used.json",
+      "strategy": null,
+      "metadata": {}
+    },
+    {
+      "artifact_type": "extraction_result",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.json",
+      "strategy": "pymupdf",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "markdown_result",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.pymupdf.md",
+      "strategy": "pymupdf",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "extraction_result",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.json",
+      "strategy": "docling",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "markdown_result",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/extraction_result.docling.md",
+      "strategy": "docling",
+      "metadata": {}
+    },
+    {
+      "artifact_type": "comparison_report",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.json",
+      "strategy": null,
+      "metadata": {}
+    },
+    {
+      "artifact_type": "comparison_report",
+      "path": "data/output/Metals_Option_Products-89ddba8c4b/run-20260529T203647Z/comparison_report.md",
+      "strategy": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-05-29T20:36:47.672413+00:00"
+  }
+}

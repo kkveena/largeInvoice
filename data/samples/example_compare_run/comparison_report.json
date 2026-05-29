@@ -1,0 +1,139 @@
+{
+  "document_id": "Metals_Option_Products-89ddba8c4b",
+  "dictionary_id": "dict-Metals_Option_Products-89ddba8c4b",
+  "compared_strategies": [
+    "pymupdf",
+    "docling"
+  ],
+  "parser_metrics": {
+    "pymupdf": {
+      "parser_name": "pymupdf",
+      "skipped": false,
+      "parse_runtime_seconds": 0.3167,
+      "page_count": 60,
+      "extracted_char_count": 766344,
+      "low_text_page_count": 0,
+      "detected_table_count": 60,
+      "detected_heading_count": 25,
+      "chunk_count": 60,
+      "avg_chunk_token_estimate": 2582.9,
+      "max_chunk_token_estimate": 2942,
+      "table_like_chunk_count": 60,
+      "repeated_header_candidate_count": 3,
+      "repeated_footer_candidate_count": 3,
+      "warning_count": 0,
+      "error_count": 0
+    },
+    "docling": {
+      "parser_name": "docling",
+      "skipped": true,
+      "parse_runtime_seconds": null,
+      "page_count": 0,
+      "extracted_char_count": 0,
+      "low_text_page_count": 0,
+      "detected_table_count": 0,
+      "detected_heading_count": 0,
+      "chunk_count": 0,
+      "avg_chunk_token_estimate": 0,
+      "max_chunk_token_estimate": 0,
+      "table_like_chunk_count": 0,
+      "repeated_header_candidate_count": 0,
+      "repeated_footer_candidate_count": 0,
+      "warning_count": 2,
+      "error_count": 0
+    }
+  },
+  "dictionary_item_coverage": {
+    "document_title": {
+      "pymupdf": 4,
+      "docling": 0
+    },
+    "report_or_business_date": {
+      "pymupdf": 3,
+      "docling": 0
+    },
+    "product_or_business_section": {
+      "pymupdf": 4,
+      "docling": 0
+    },
+    "entity_identifiers": {
+      "pymupdf": 4,
+      "docling": 0
+    },
+    "key_table_metrics": {
+      "pymupdf": 4,
+      "docling": 0
+    },
+    "operational_status": {
+      "pymupdf": 4,
+      "docling": 0
+    },
+    "exception_or_risk_indicators": {
+      "pymupdf": 4,
+      "docling": 0
+    },
+    "totals_and_summary_values": {
+      "pymupdf": 4,
+      "docling": 0
+    },
+    "disclaimers_or_caveats": {
+      "pymupdf": 1,
+      "docling": 0
+    },
+    "source_table_references": {
+      "pymupdf": 4,
+      "docling": 0
+    }
+  },
+  "extraction_presence_diff": {
+    "document_title": {
+      "pymupdf": true,
+      "docling": false
+    },
+    "report_or_business_date": {
+      "pymupdf": true,
+      "docling": false
+    },
+    "product_or_business_section": {
+      "pymupdf": true,
+      "docling": false
+    },
+    "entity_identifiers": {
+      "pymupdf": false,
+      "docling": false
+    },
+    "key_table_metrics": {
+      "pymupdf": true,
+      "docling": false
+    },
+    "operational_status": {
+      "pymupdf": true,
+      "docling": false
+    },
+    "exception_or_risk_indicators": {
+      "pymupdf": true,
+      "docling": false
+    },
+    "totals_and_summary_values": {
+      "pymupdf": true,
+      "docling": false
+    },
+    "disclaimers_or_caveats": {
+      "pymupdf": false,
+      "docling": false
+    },
+    "source_table_references": {
+      "pymupdf": false,
+      "docling": false
+    }
+  },
+  "warnings": [
+    "[docling] Docling is not installed; Docling parser path was skipped.",
+    "[docling] No chunks available for 'docling'; extraction skipped."
+  ],
+  "recommendation_notes": [
+    "Parser path 'docling' produced no pages and was treated as a graceful skip.",
+    "Only 'pymupdf' ran successfully; comparison is single-sided.",
+    "Raw-value agreement on 0/10 dictionary items across parser paths."
+  ]
+}

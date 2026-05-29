@@ -1,0 +1,23 @@
+{
+  "document_id": "Metals_Option_Products-89ddba8c4b",
+  "strategy": "docling",
+  "page_count": 0,
+  "total_char_count": 0,
+  "empty_or_low_text_pages": [],
+  "detected_headings": [],
+  "detected_table_count": 0,
+  "repeated_header_candidates": [],
+  "repeated_footer_candidates": [],
+  "representative_chunk_ids": [],
+  "metadata": {
+    "representative_pages": [],
+    "parse_runtime_seconds": null,
+    "parser": "docling",
+    "parser_version": "unavailable",
+    "skipped": true,
+    "warnings": [
+      "Docling is not installed; Docling parser path was skipped.",
+      "Parser 'docling' produced no pages (skipped)."
+    ]
+  }
+}

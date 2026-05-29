@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "large-pdf-extractor"
+version = "0.1.0"
+description = "Phase 1 generic large-PDF extraction system (dictionary-first, parser-aware, Finance-Market-Ops-aware but document-type agnostic)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Large PDF Extractor Team" }]
+dependencies = [
+  "pydantic>=2.7",
+  "pydantic-settings>=2.2",
+  "typer>=0.12",
+  "rich>=13.7",
+  "python-dotenv>=1.0",
+  "pypdf>=4.2",
+  "pymupdf>=1.24",
+  "pandas>=2.2",
+  "tabulate>=0.9",
+  "tenacity>=8.2",
+]
+
+[project.optional-dependencies]
+# Docling is a heavy, environment-specific dependency. It is optional: the
+# pipeline runs fully with PyMuPDF + FakeLLMProvider and the Docling path skips
+# gracefully when this extra is not installed.
+docling = ["docling>=2.0"]
+gemini = ["google-generativeai>=0.7"]
+openai = ["openai>=1.40"]
+dev = ["pytest>=8.2", "pytest-cov>=5.0", "ruff>=0.5", "mypy>=1.10"]
+notebook = ["jupyterlab>=4.2", "ipywidgets>=8.1", "nbconvert>=7.0", "nbformat>=5.0"]
+
+[project.scripts]
+large-pdf-extractor = "large_pdf_extractor.cli.main:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

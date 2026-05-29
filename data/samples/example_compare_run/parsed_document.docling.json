@@ -1,0 +1,15 @@
+{
+  "document_id": "Metals_Option_Products-89ddba8c4b",
+  "filename": "Metals_Option_Products.pdf",
+  "page_count": 0,
+  "strategy": "docling",
+  "pages": [],
+  "metadata": {
+    "parser": "docling",
+    "parser_version": "unavailable",
+    "skipped": true,
+    "warnings": [
+      "Docling is not installed; Docling parser path was skipped."
+    ]
+  }
+}
