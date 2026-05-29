@@ -36,6 +36,17 @@ This architecture must support those patterns without hard-coding them. A contra
 
 ## 3. Critical Phase 1 Decision: Dictionary Before Extraction
 
+## 2A. Domain Orientation: Finance Market Operations Technology
+
+The initial target documents are expected to come from Finance / Markets / Operations Technology. This includes documents such as market operations bulletins, settlement reports, clearing reports, reconciliation outputs, exception reports, margin/collateral documents, trade lifecycle reports, regulatory/control reports, payment operations documents, and confirmations.
+
+The domain orientation affects **dictionary proposal** and **candidate-selection hints**, not the core architecture. The parser, profiler, chunker, extractor, renderer, and Pydantic models must remain document-type agnostic.
+
+Finance Market Ops documents commonly include dense tables, repeated legal or control text, product sections, business dates, report dates, trade and settlement dates, contract identifiers, counterparty or legal entity identifiers, quantities, prices, rates, notionals, settlement amounts, margin/collateral values, exposure, variance, P&L, volume, open interest, status indicators, exceptions, and disclaimers.
+
+Architectural rule: finance-aware intelligence belongs in externalized configuration, dictionary templates, prompts, examples, or future domain packs. It must not be embedded as brittle one-off parsing rules for CME, metals, options, futures, or any individual document.
+
+
 The extraction dictionary must be created or loaded before final extraction. This is the most important design principle for Phase 1.
 
 The dictionary is the extraction contract. It defines:

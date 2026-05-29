@@ -20,6 +20,15 @@ The reference example for this project is a CME metals options daily bulletin. I
 
 ## Core Design Decision: Dictionary First
 
+## Domain Context: Finance Market Operations Technology
+
+The first target document family is Finance / Markets / Operations Technology. Example documents may include market operations reports, trade lifecycle documents, futures/options bulletins, settlement or delivery reports, reconciliations, exception reports, margin/collateral reports, position/open-interest reports, regulatory/control documents, payment, settlement, clearing, and confirmation documents.
+
+This context should help the system propose useful extraction dictionaries and candidate-selection hints. However, the implementation must remain generic. Finance-specific behavior should be represented through configurable dictionary templates, prompts, examples, and candidate-selection hints rather than hard-coded parser or extractor logic.
+
+The system should be careful with raw financial and operational values. Preserve raw values and source page/chunk references. Only normalize values when the value type and meaning are unambiguous.
+
+
 Phase 1 must build or load the extraction dictionary before final extraction.
 
 The dictionary defines what the system is allowed to extract. It acts as the contract between the PDF, the extraction prompts, the JSON result, and the Markdown output.

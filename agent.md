@@ -8,6 +8,27 @@ This project must be generic. The provided CME Metals Options Products bulletin 
 
 ## Non-Negotiable Phase 1 Requirement: Dictionary First
 
+## Domain Orientation: Finance Market Operations Technology
+
+Most expected documents for this project are from Finance / Markets / Operations Technology. The system should therefore be friendly to dense financial and operational documents such as market operations reports, trade lifecycle documents, futures/options bulletins, settlement and delivery reports, reconciliations, exception reports, margin/collateral reports, position or open-interest reports, regulatory/control documents, payment reports, clearing documents, and confirmation documents.
+
+This domain orientation should improve dictionary proposal hints and sample dictionaries, but the **core pipeline must remain generic**. Do not hard-code CME, metals, options, futures, settlement, clearing, or any single financial document type into the parser, chunker, extractor, renderer, or core Pydantic models.
+
+Finance Market Ops documents often contain:
+
+- dense tables and table-like text;
+- repeated headers, footers, disclaimers, and control notes;
+- product, contract, account, book, desk, legal entity, counterparty, and trade identifiers;
+- dates such as business date, report date, trade date, settlement date, maturity date, and expiration date;
+- numeric fields such as quantity, price, rate, notional, settlement amount, margin, collateral, exposure, variance, open interest, volume, delta, and P&L;
+- operational statuses such as NEW, UNCH, amended, cancelled, failed, pending, settled, matched, unmatched, exception, rejected, or out-of-floor;
+- caveats about data quality, operational controls, and legal disclaimers.
+
+Phase 1 should preserve raw values and source page/chunk references. Normalized financial values should only be produced when unambiguous. Any finance-specific behavior must live in configurable hints, dictionary templates, examples, or prompts — not hidden inside core services.
+
+Dictionary proposal for Finance Market Ops documents may include generic categories such as document metadata, business/report date, product or business section, entity identifiers, key table metrics, operational status, exception/risk indicators, totals and summary values, disclaimers/caveats, and source table references. These categories must remain configurable and replaceable.
+
+
 The dictionary is the control contract for extraction. The system must not perform open-ended extraction first and then infer a schema afterward.
 
 Phase 1 must follow this order:
