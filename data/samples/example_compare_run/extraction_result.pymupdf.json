@@ -1,0 +1,198 @@
+{
+  "document_id": "Metals_Option_Products-89ddba8c4b",
+  "dictionary_id": "dict-Metals_Option_Products-89ddba8c4b",
+  "parse_strategy": "pymupdf",
+  "values": [
+    {
+      "item_id": "document_title",
+      "entity_name": "document_title",
+      "value": "METALS OPTION PRODUCTS",
+      "raw_value": "METALS OPTION PRODUCTS",
+      "normalized_value": null,
+      "confidence": 0.5,
+      "source_spans": [
+        {
+          "document_id": "Metals_Option_Products-89ddba8c4b",
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "pymupdf-c0000-p1",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null
+        }
+      ],
+      "extraction_notes": "Deterministic match on line: 'METALS OPTION PRODUCTS'",
+      "warnings": []
+    },
+    {
+      "item_id": "report_or_business_date",
+      "entity_name": "report_or_business_date",
+      "value": "May 28, 2026",
+      "raw_value": "May 28, 2026",
+      "normalized_value": null,
+      "confidence": 0.5,
+      "source_spans": [
+        {
+          "document_id": "Metals_Option_Products-89ddba8c4b",
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "pymupdf-c0000-p1",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null
+        }
+      ],
+      "extraction_notes": "Deterministic match on line: 'Thu, May 28, 2026'",
+      "warnings": []
+    },
+    {
+      "item_id": "product_or_business_section",
+      "entity_name": "product_or_business_section",
+      "value": "METALS OPTION PRODUCTS",
+      "raw_value": "METALS OPTION PRODUCTS",
+      "normalized_value": null,
+      "confidence": 0.5,
+      "source_spans": [
+        {
+          "document_id": "Metals_Option_Products-89ddba8c4b",
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "pymupdf-c0000-p1",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null
+        }
+      ],
+      "extraction_notes": "Deterministic match on line: 'METALS OPTION PRODUCTS'",
+      "warnings": []
+    },
+    {
+      "item_id": "entity_identifiers",
+      "entity_name": "entity_identifiers",
+      "value": null,
+      "raw_value": null,
+      "normalized_value": null,
+      "confidence": 0.0,
+      "source_spans": [],
+      "extraction_notes": "No grounded value found in candidate chunks.",
+      "warnings": [
+        "value_not_found_in_candidates"
+      ]
+    },
+    {
+      "item_id": "key_table_metrics",
+      "entity_name": "key_table_metrics",
+      "value": "THE CME GROUP DAILY BULLETIN ONLY DISPLAYS THOSE PRODUCTS/CONTRACT MONTHS THAT HAVE VOLUME AND/OR OPEN INTEREST. VOLUME INCLUDES GLOBEX (",
+      "raw_value": "THE CME GROUP DAILY BULLETIN ONLY DISPLAYS THOSE PRODUCTS/CONTRACT MONTHS THAT HAVE VOLUME AND/OR OPEN INTEREST. VOLUME INCLUDES GLOBEX (",
+      "normalized_value": null,
+      "confidence": 0.5,
+      "source_spans": [
+        {
+          "document_id": "Metals_Option_Products-89ddba8c4b",
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "pymupdf-c0000-p1",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null
+        }
+      ],
+      "extraction_notes": "Deterministic match on line: 'THE CME GROUP DAILY BULLETIN ONLY DISPLAYS THOSE PRODUCTS/CONTRACT MONTHS THAT HAVE VOLUME AND/OR OPEN INTEREST. VOLUME '",
+      "warnings": []
+    },
+    {
+      "item_id": "operational_status",
+      "entity_name": "operational_status",
+      "value": "FINAL",
+      "raw_value": "FINAL",
+      "normalized_value": null,
+      "confidence": 0.5,
+      "source_spans": [
+        {
+          "document_id": "Metals_Option_Products-89ddba8c4b",
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "pymupdf-c0000-p1",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null
+        }
+      ],
+      "extraction_notes": "Deterministic match on line: 'FINAL'",
+      "warnings": []
+    },
+    {
+      "item_id": "exception_or_risk_indicators",
+      "entity_name": "exception_or_risk_indicators",
+      "value": "20 South Wacker Drive, Chicago, Illinois 60606-7499.",
+      "raw_value": "20 South Wacker Drive, Chicago, Illinois 60606-7499.",
+      "normalized_value": null,
+      "confidence": 0.5,
+      "source_spans": [
+        {
+          "document_id": "Metals_Option_Products-89ddba8c4b",
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "pymupdf-c0000-p1",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null
+        }
+      ],
+      "extraction_notes": "Deterministic match on line: '20 South Wacker Drive, Chicago, Illinois 60606-7499.'",
+      "warnings": []
+    },
+    {
+      "item_id": "totals_and_summary_values",
+      "entity_name": "totals_and_summary_values",
+      "value": "20",
+      "raw_value": "20",
+      "normalized_value": null,
+      "confidence": 0.5,
+      "source_spans": [
+        {
+          "document_id": "Metals_Option_Products-89ddba8c4b",
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "pymupdf-c0000-p1",
+          "char_start": null,
+          "char_end": null,
+          "bbox": null
+        }
+      ],
+      "extraction_notes": "Deterministic match on line: '20 South Wacker Drive, Chicago, Illinois 60606-7499.'",
+      "warnings": []
+    },
+    {
+      "item_id": "disclaimers_or_caveats",
+      "entity_name": "disclaimers_or_caveats",
+      "value": null,
+      "raw_value": null,
+      "normalized_value": null,
+      "confidence": 0.0,
+      "source_spans": [],
+      "extraction_notes": "No grounded value found in candidate chunks.",
+      "warnings": [
+        "value_not_found_in_candidates"
+      ]
+    },
+    {
+      "item_id": "source_table_references",
+      "entity_name": "source_table_references",
+      "value": null,
+      "raw_value": null,
+      "normalized_value": null,
+      "confidence": 0.0,
+      "source_spans": [],
+      "extraction_notes": "No grounded value found in candidate chunks.",
+      "warnings": [
+        "value_not_found_in_candidates"
+      ]
+    }
+  ],
+  "unmapped_observations": [],
+  "markdown_summary": "# Extraction Result — `pymupdf`\n\n- **Document ID:** `Metals_Option_Products-89ddba8c4b`\n- **Dictionary ID:** `dict-Metals_Option_Products-89ddba8c4b`\n- **Parser strategy:** `pymupdf`\n- **Values populated:** 7 / 10\n\n## Extracted Values\n\n| Item | Entity | Value | Confidence | Source (pages / chunk) | Warnings |\n|------|--------|-------|------------|------------------------|----------|\n| `document_title` | document_title | METALS OPTION PRODUCTS | 0.50 | p1 (pymupdf-c0000-p1) |  |\n| `report_or_business_date` | report_or_business_date | May 28, 2026 | 0.50 | p1 (pymupdf-c0000-p1) |  |\n| `product_or_business_section` | product_or_business_section | METALS OPTION PRODUCTS | 0.50 | p1 (pymupdf-c0000-p1) |  |\n| `entity_identifiers` | entity_identifiers | _null_ | 0.00 |  | value_not_found_in_candidates |\n| `key_table_metrics` | key_table_metrics | THE CME GROUP DAILY BULLETIN ONLY DISPLAYS THOSE PRODUCTS/CONTRACT MONTHS THAT HAVE VOLUME AND/OR OPEN INTEREST. VOLUME INCLUDES GLOBEX ( | 0.50 | p1 (pymupdf-c0000-p1) |  |\n| `operational_status` | operational_status | FINAL | 0.50 | p1 (pymupdf-c0000-p1) |  |\n| `exception_or_risk_indicators` | exception_or_risk_indicators | 20 South Wacker Drive, Chicago, Illinois 60606-7499. | 0.50 | p1 (pymupdf-c0000-p1) |  |\n| `totals_and_summary_values` | totals_and_summary_values | 20 | 0.50 | p1 (pymupdf-c0000-p1) |  |\n| `disclaimers_or_caveats` | disclaimers_or_caveats | _null_ | 0.00 |  | value_not_found_in_candidates |\n| `source_table_references` | source_table_references | _null_ | 0.00 |  | value_not_found_in_candidates |\n",
+  "metadata": {
+    "provider": "fake"
+  }
+}

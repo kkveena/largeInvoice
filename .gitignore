@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.installed.cfg
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Notebook
+.ipynb_checkpoints/
+notebooks/*.executed.ipynb
+
+# Environment
+.env
+
+# OS
+.DS_Store
+
+# Run outputs (keep the folder, ignore generated runs)
+data/output/*
+!data/output/.gitkeep

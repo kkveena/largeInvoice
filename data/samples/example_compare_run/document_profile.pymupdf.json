@@ -1,0 +1,67 @@
+{
+  "document_id": "Metals_Option_Products-89ddba8c4b",
+  "strategy": "pymupdf",
+  "page_count": 60,
+  "total_char_count": 766344,
+  "empty_or_low_text_pages": [],
+  "detected_headings": [
+    "METALS OPTIONS PRODUCTS",
+    "METALS OPTION PRODUCTS",
+    "Side 01",
+    "PG64",
+    "Thu, May 28, 2026",
+    "Side 02",
+    "Side 03",
+    "Side 04",
+    "Side 05",
+    "Side 06",
+    "Side 07",
+    "Side 08",
+    "Side 09",
+    "Side 10",
+    "Side 11",
+    "Side 12",
+    "Side 13",
+    "Side 14",
+    "Side 15",
+    "Side 16",
+    "Side 17",
+    "Side 18",
+    "Side 19",
+    "Side 20",
+    "Side 21"
+  ],
+  "detected_table_count": 60,
+  "repeated_header_candidates": [
+    "METALS OPTIONS PRODUCTS",
+    "CME Group, Inc.",
+    "2026 DAILY INFORMATION BULLETIN - http://www.cmegroup.com/dailybulletin"
+  ],
+  "repeated_footer_candidates": [
+    "IS ACCEPTED BY THE USER ON THE CONDITION THAT ERRORS OR OMISSIONS SHALL NOT BE MADE THE BASIS FOR ANY CLAIM, DEMAND, OR CAUSE FOR ACTION.",
+    "THE INFORMATION CONTAINED IN THIS REPORT IS COMPILED FOR THE CONVENIENCE OF THE USER AND IS FURNISHED WITHOUT RESPONSIBILITY FOR ACCURACY OR CONTENT. IT",
+    "© Copyright CME Group Inc. All rights reserved."
+  ],
+  "representative_chunk_ids": [
+    "pymupdf-c0000-p1",
+    "pymupdf-c0014-p15",
+    "pymupdf-c0028-p29",
+    "pymupdf-c0042-p43",
+    "pymupdf-c0056-p57",
+    "pymupdf-c0001-p2"
+  ],
+  "metadata": {
+    "representative_pages": [
+      1,
+      15,
+      29,
+      43,
+      57
+    ],
+    "parse_runtime_seconds": 0.3167,
+    "parser": "pymupdf",
+    "parser_version": "1.27.2.3",
+    "skipped": false,
+    "warnings": []
+  }
+}
