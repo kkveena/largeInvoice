@@ -8,6 +8,7 @@ pipeline if Docling is unavailable or fails: in that case it returns a
 
 from __future__ import annotations
 
+import os
 import time
 from pathlib import Path
 
@@ -23,6 +24,7 @@ class DoclingParser:
 
     def is_available(self) -> bool:
         """Return True if the Docling dependency can be imported."""
+        _configure_torch_for_mps()
         try:
             import docling  # noqa: F401
 
@@ -58,6 +60,7 @@ class DoclingParser:
     def _parse_with_docling(
         self, pdf_path: str, document_id: str, filename: str
     ) -> ParsedDocument:
+        _configure_torch_for_mps()
         from docling.document_converter import DocumentConverter
 
         start = time.perf_counter()
@@ -155,6 +158,19 @@ class DoclingParser:
                 "warnings": [warning],
             },
         )
+
+
+def _configure_torch_for_mps() -> None:
+    os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
+    try:
+        import torch
+
+        try:
+            torch.set_default_dtype(torch.float32)
+        except Exception:
+            pass
+    except ImportError:
+        pass
 
 
 def _provenance_page(item) -> int:
